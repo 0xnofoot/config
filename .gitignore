@@ -1,0 +1,14 @@
+
+# ignore everything
+/*
+/*/
+
+# ... but these:
+!/.xinitrc
+!/keymap.conf
+!/.Xmodmap
+!/.Xresources
+!/.gitignore
+!/env_profile
+!/README
+!/libinput-gestures.conf

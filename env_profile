@@ -1,0 +1,39 @@
+# it is enviroment variables file
+# source it with your shell
+
+
+# system proxy
+# export https_proxy=127.0.0.1:7890
+# export http_proxy=127.0.0.1:7890
+# export socks_proxy=127.0.0.1:7891
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=ibus
+
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+
+export PIC_HOME=$HOME/Pictures
+export DOWNLOAD_HOME=$HOME/Downloads
+export DESKTOP_HOME=$HOME/Desktop
+
+export DWM_HOME=$HOME/App/suckless/dwm
+export ST_HOME=$HOME/App/suckless/st
+export DMENU_HOME=$HOME/App/suckless/dmenu
+export PICOM_HOME=$HOME/App/picom
+
+export CLASH_HOME=$HOME/App/clash
+
+# for idea window
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+export PATH="/home/nofoot/.local/bin:$PATH"
+
+export CLASSPATH=$:CLASSPATH:$JAVA_HOME/lib/
+export PATH=$PATH:$JAVA_HOME/bin
+
+
