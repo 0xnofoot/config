@@ -13,19 +13,19 @@ fi
 # Function to delete the oldest files in the trash directory
 delete_oldest_files() {
   # Get a list of all files in the trash directory, sorted by modification time (oldest first)
-  files=($(find "$TRASH_HOME" -type f -printf '%T@ %p\n' | sort -n | cut -d' ' -f 2))
+  files=($(sudo find "$TRASH_HOME" -type f -printf '%T@ %p\n' | sort -n | cut -d' ' -f 2))
 
   # Calculate the current size of the trash directory
-  size=$(du -bs "$TRASH_HOME" | cut -f 1)
+  size=$(sudo du -bs "$TRASH_HOME" | cut -f 1)
 
   # Delete the oldest files until the size of the trash directory is less than the maximum size
   for file in "${files[@]}"; do
     if [ $size -lt $MAX_SIZE ]; then
       break
     fi
-    echo "remove [$file]"
+    echo "sudo remove [$file]"
     rm -rf "$file"
-    size=$(du -bs "$TRASH_HOME" | cut -f 1)
+    size=$(sudo du -bs "$TRASH_HOME" | cut -f 1)
   done
 
   # Delete empty directories in the trash directory
@@ -39,7 +39,7 @@ fi
 
 if [[ "$1" == "-check" ]]; then
   # Check the size of the trash directory
-  size=$(du -bs "$TRASH_HOME" | cut -f 1)
+  size=$(sudo du -bs "$TRASH_HOME" | cut -f 1)
 
   if [ $size -gt $MAX_SIZE ]; then
     echo "Trash directory size is over 20GB. Deleting old files..."
@@ -62,7 +62,7 @@ else
     mkdir -p "$TRASH_HOME$parent_dir"
 
     # Move the file to the trash directory, preserving the directory structure
-    mv "$full_path" "$TRASH_HOME$parent_dir/$filename"
+    sudo mv "$full_path" "$TRASH_HOME$parent_dir/$filename"
 
     echo "Moved $full_path to $TRASH_HOME"
 
