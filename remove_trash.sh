@@ -46,6 +46,9 @@ if [[ "$1" == "-check" ]]; then
     delete_oldest_files
     echo "Done."
   fi
+elif [[ "$1" == "-crush" ]]; then
+  echo "remove all file in $TRASH_HOME"
+  sudo rm -rf $TRASH_HOME
 else
   # Loop through each argument passed to the command
   for arg in "$@"; do
