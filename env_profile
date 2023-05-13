@@ -17,6 +17,8 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 
+export TRASH_HOME=$HOME/.trash
+
 export PIC_HOME=$HOME/Pictures
 export DOWNLOAD_HOME=$HOME/Downloads
 export DESKTOP_HOME=$HOME/Desktop

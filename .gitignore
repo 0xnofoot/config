@@ -12,3 +12,5 @@
 !/env_profile
 !/README
 !/libinput-gestures.conf
+
+!/remove_trash.sh
