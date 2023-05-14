@@ -65,7 +65,7 @@ else
     mkdir -p "$TRASH_HOME$parent_dir"
 
     # Move the file to the trash directory, preserving the directory structure
-    sudo mv "$full_path" "$TRASH_HOME$parent_dir/$filename"
+    sudo mv -b "$full_path" "$TRASH_HOME$parent_dir/$filename"
 
     echo "Moved $full_path to $TRASH_HOME"
 
