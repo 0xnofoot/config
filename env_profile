@@ -26,7 +26,6 @@ export DESKTOP_HOME=$HOME/Desktop
 export DWM_HOME=$HOME/App/suckless/dwm
 export ST_HOME=$HOME/App/suckless/st
 export DMENU_HOME=$HOME/App/suckless/dmenu
-export PICOM_HOME=$HOME/App/picom
 
 export CLASH_HOME=$HOME/App/clash
 
